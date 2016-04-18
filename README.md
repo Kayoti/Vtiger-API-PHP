@@ -7,7 +7,9 @@ Vtiger-Webservices-HTTP_Request2/
 │    ├──crm_webservice.php
 │  ├──auth.php
 ├── model/
+│  config.php
 ├── View/
+│  ├──index.php
 ├── .gitignore.swp
 ├── .README.md
 ├── .LICENSE.md
