@@ -19,19 +19,21 @@ To run this project you will need to install pear first
 * Make sure you have proper permissions
 $ `sudo su`
 * Make sure you have wget, if not install wget
-$ `apt-get install wget` OR \n
-$ `yum install wget` \n
+$ `apt-get install wget` OR <br />
+$ `yum install wget` <br />
 * Install PEAR
-$ `yum install php-pear` OR \n
+$ `yum install php-pear` OR <br />
 $ `$ wget http://pear.php.net/go-pear.phar` then `$ php go-pear.phar`
 * To verify your installation run
 $ `pear info PEAR`
 * Install HTTP_Request2 Package
-$ `pear install HTTP_Request2-(Version Number Here)``
+$ `pear install HTTP_Request2-(Version Number Here)`
 * Using PYRUS
 $ `php pyrus.phar install pear/HTTP_Request2-(Version Number Here)`
 * When making HTTP_Request2 calls make sure your project has access to the installed HTTP_Request2 package
 * Finally PRO tip -> to debug your code use the following code to toggle error messages display On/OFF
-`ini_set('display_errors', 1);`\n
-`ini_set('display_startup_errors', 1);`\n
+```php
+`ini_set('display_errors', 1);`<br />
+`ini_set('display_startup_errors', 1);`<br />
 `error_reporting(E_ALL);`
+```
