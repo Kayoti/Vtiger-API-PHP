@@ -33,7 +33,9 @@ $ `php pyrus.phar install pear/HTTP_Request2-(Version Number Here)`
 * When making HTTP_Request2 calls make sure your project has access to the installed HTTP_Request2 package
 * Finally PRO tip -> to debug your code use the following code to toggle error messages display On/OFF
 ```php
-`ini_set('display_errors', 1);`
-`ini_set('display_startup_errors', 1);`
-`error_reporting(E_ALL);`
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 ```
