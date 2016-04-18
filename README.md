@@ -18,17 +18,17 @@ Vtiger-Webservices-HTTP_Request2/
 To run this project you will need to install pear first
 * Make sure you have proper permissions
 $ `sudo su`
-* Make sure you have wget, if not install wget
+* Make sure you have wget, if not install wget<br />
 $ `apt-get install wget` OR <br />
 $ `yum install wget` <br />
-* Install PEAR
+* Install PEAR<br />
 $ `yum install php-pear` OR <br />
 $ `$ wget http://pear.php.net/go-pear.phar` then `$ php go-pear.phar`
-* To verify your installation run
+* To verify your installation run <br />
 $ `pear info PEAR`
-* Install HTTP_Request2 Package
+* Install HTTP_Request2 Package <br />
 $ `pear install HTTP_Request2-(Version Number Here)`
-* Using PYRUS
+* Using PYRUS <br />
 $ `php pyrus.phar install pear/HTTP_Request2-(Version Number Here)`
 * When making HTTP_Request2 calls make sure your project has access to the installed HTTP_Request2 package
 * Finally PRO tip -> to debug your code use the following code to toggle error messages display On/OFF
