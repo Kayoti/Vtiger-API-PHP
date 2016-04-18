@@ -90,9 +90,7 @@ public function signIn($challengeToken,$userName,$endpointUrl){
          return $err;
       }
 
-      //login successful extract sessionId and userId from LoginResult to it can used for further calls.
-      //$sessionId = $jsonResponse['result']['sessionName'];
-      //$userId = $jsonResponse['result']['userId'];
+      
 
 
    }
