@@ -16,7 +16,7 @@ Vtiger-Webservices-HTTP_Request2/
 ```		
 ###Installation
 To run this project you will need to install pear first
-* Make sure you have proper permissions
+* Make sure you have proper permissions <br />
 $ `sudo su`
 * Make sure you have wget, if not install wget<br />
 $ `apt-get install wget` OR <br />
