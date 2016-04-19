@@ -1,4 +1,4 @@
-### Vtiger Webservices API PHP example using Pear HTTP_Request2
+### Vtiger Webservices API PHP Wrapper using Pear HTTP_Request2
 ###Structure
 ```
 Vtiger-Webservices-HTTP_Request2/
