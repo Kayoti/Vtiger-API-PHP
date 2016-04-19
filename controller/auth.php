@@ -2,7 +2,7 @@
 require_once 'classes/crm_webservice.php';
 $url = 'http://example.com/vtigercrm/webservice.php';
 $userName="admin";
-$crmobj= new crmconnect($url);
+$crmobj= new crm_webservice($url);
 $crmResponse=$crmobj->getToken($userName,$url);
 //IF operation was successful get the token from the reponse.
 $challengeToken = $crmResponse['result']['token'];
