@@ -1,18 +1,19 @@
 <?php
-require_once 'classes/crm_webservice.php';
+require_once ('classes/crm_webservice.php');
 $url = 'http://example.com/vtigercrm/webservice.php';
-$userName="admin";
-$crmobj= new crm_webservice($url);
-$crmResponse=$crmobj->getToken($userName,$url);
+$userName='[YOUR CRM USER HERE]';
+$userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
+//Creates a new webservices object by passing vtigercrm url, a vtiger crm username, vtigercrm useraccesskey
+$crmobj= new crm_webservice($url,$userName,$userAccessKey);
+
 //IF operation was successful get the token from the reponse.
-$challengeToken = $crmResponse['result']['token'];
-$serverTime = $crmResponse['result']['serverTime'];
-$expireTime = $crmResponse['result']['expireTime'];
-$crmLogin=$crmobj->signIn($challengeToken,$userName,$url);
+$challengeToken = $crmobj->get_token();
+//echo $challengeToken['result']['token'];
+//echo $challengeToken['result']['serverTime'];
+//echo $challengeToken['result']['expireTime'];
 //IF login successful extract sessionId and userId from LoginResult to it can used for further calls.
-$userId = $crmLogin['result']['userId'];
-$sessionId=$crmLogin['result']['sessionName'];
-//echo $challengeToken;
-//echo $sessionId;
+$login = $crmobj->get_access();
+//echo $login['result']['userId'];;
+//echo $login['result']['sessionName'];;
 
 ?>

@@ -12,23 +12,31 @@ returns HTTP_Request2 object
 ***/
 class crm_webservice
 {
-   protected $userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
+   protected $_AccessKey='';
+   protected $_user='';
+   protected $_url='';
    protected $_httpObj='';
+   protected $_token='';
+   protected $_login='';
    //Properties
 
 
    //Methods
    //constructor
-   public function __construct($endpointUrl)
+   public function __construct($endpointUrl,$userName,$userAccessKey)
    {
-      $this->_httpObj = new HTTP_Request2("$endpointUrl");
-
+      $this->_url=$endpointUrl;
+      $this->_user=$userName;
+      $this->_AccessKey=$userAccessKey;
+      $this->_httpObj = new HTTP_Request2($this->url);
+      $this->_token= $this->set_token();
+      $this->_login= $this->set_access();
    }
-   public function getToken($userName,$endpointUrl){
+   protected function set_token(){
 
       $request=$this->_httpObj;
       $args = array('operation' => 'getchallenge',
-      'username' => $userName
+      'username' => $this->_user
    );
    $request->setMethod(HTTP_Request2::METHOD_GET);
    $url = $request->getUrl();
@@ -55,18 +63,20 @@ class crm_webservice
       return $err;
    }
 }
-public function signIn($challengeToken,$userName,$endpointUrl){
+protected function set_access(){
    $request=$this->_httpObj;
+   $tokenResponse = $this->_token;
+   $challengeToken=$tokenResponse['result']['token'];
    //access key of the user admin, found on my preferences page.
    //create md5 string concatenating user accesskey from my preference page
    //and the challenge token obtained from get challenge result.
-   $generatedKey = md5($challengeToken.$this->userAccessKey);
+   $generatedKey = md5($challengeToken.$this->_AccessKey);
    //login request must be POST request.
 
    $request->setMethod(HTTP_Request2::METHOD_POST)
    ->addPostParameter(array(
       'operation'=>'login',
-      'username'=>$userName,
+      'username'=>$this->_user,
       'accessKey'=>$generatedKey));
       try {
          $response = $request->send();
@@ -93,6 +103,12 @@ public function signIn($challengeToken,$userName,$endpointUrl){
 
 
 
+   }
+   public function get_token(){
+      return $this->_token;
+   }
+   public function get_access(){
+      return $this->_login;
    }
 
 }
