@@ -28,7 +28,7 @@ class crm_webservice
       $this->_url=$endpointUrl;
       $this->_user=$userName;
       $this->_AccessKey=$userAccessKey;
-      $this->_httpObj = new HTTP_Request2($this->url);
+      $this->_httpObj = new HTTP_Request2($this->_url);
       $this->_token= $this->set_token();
       $this->_login= $this->set_access();
    }
