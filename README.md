@@ -25,7 +25,7 @@ $ `apt-get install wget` OR <br />
 $ `yum install wget` <br />
 * Install PEAR<br />
 $ `yum install php-pear` OR <br />
-$ `wget http://pear.php.net/go-pear.phar` then `$ php go-pear.phar`
+$ `wget http://pear.php.net/go-pear.phar`<br> then $` php go-pear.phar`
 * To verify your installation run <br />
 $ `pear info PEAR`
 * Install HTTP_Request2 Package <br />
