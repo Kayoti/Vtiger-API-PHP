@@ -41,3 +41,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
 ```
+###USAGE
+To use this project you must replace the variables in controller/auth.php with your own information
+
+```php
+<?php
+$url = 'http://example.com/vtigercrm/webservice.php';
+$userName='[YOUR CRM USER HERE]';
+$userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
+?>
+```
