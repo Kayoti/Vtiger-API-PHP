@@ -1,3 +1,0 @@
-<?php
-require ('auth.php');
-?>

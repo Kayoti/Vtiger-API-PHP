@@ -1,19 +1,25 @@
 <?php
-require_once ('classes/crm_webservice.php');
-$url = 'http://example.com/vtigercrm/webservice.php';
-$userName='[YOUR CRM USER HERE]';
-$userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
-//Creates a new webservices object by passing vtigercrm url, a vtiger crm username, vtigercrm useraccesskey
-$crmobj= new crm_webservice($url,$userName,$userAccessKey);
+//access key of the user admin, found on my preferences page.
+//URL should be the vtiger installed path
 
-//IF operation was successful get the token from the reponse.
+$endpointUrl = 'http://example.com/webservice.php';
+$userName = '[YOUR CRM USER HERE]';
+$userAccessKey = '[YOUR CRM USER ACCESS KEY HERE]';
+
+// Create instance for class
+$crmobj= new crm_webservice($endpointUrl,$userName,$userAccessKey);
+
 $challengeToken = $crmobj->get_token();
 //echo $challengeToken['result']['token'];
 //echo $challengeToken['result']['serverTime'];
 //echo $challengeToken['result']['expireTime'];
-//IF login successful extract sessionId and userId from LoginResult to it can used for further calls.
+//echo "<br />";
 $login = $crmobj->get_access();
-//echo $login['result']['userId'];;
-//echo $login['result']['sessionName'];;
+$userid=$login['result']['userId'];
+$sessionid=$login['result']['sessionName'];
+
+
+
+
 
 ?>
