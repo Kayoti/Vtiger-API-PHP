@@ -4,7 +4,7 @@ include('../model/constant.inc');
 
 include(ROOT_PATH.'controller/classes/crm_webservice.php');
 include(ROOT_PATH.'controller/auth.php');
-include(ROOT_PATH.'controller/classes/query.php');
+include(ROOT_PATH.'controller/classes/crm_crudoperation.php');
 
 
 // Get the url and sessionid from auth.php
