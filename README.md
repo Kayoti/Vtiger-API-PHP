@@ -1,4 +1,4 @@
-### Vtiger Webservices API PHP Wrapper
+### Vtiger API PHP Wrapper (webservices)
 ###Structure
 ```
 Vtiger-Webservices-curl/
