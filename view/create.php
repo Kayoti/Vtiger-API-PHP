@@ -3,7 +3,7 @@ include('../model/constant.inc');
 /* create entry by using Webservice -API */
 include(ROOT_PATH.'controller/classes/crm_webservice.php');
 include(ROOT_PATH.'controller/auth.php');
-include(ROOT_PATH.'controller/classes/query.php');
+include(ROOT_PATH.'controller/classes/crm_crudoperation.php');
 
 // Get the url and sessionid from auth.php
 // create instance for class
