@@ -1,7 +1,7 @@
 ### Vtiger Webservices API PHP Wrapper
 ###Structure
 ```
-Vtiger-Webservices-HTTP_Request2/
+Vtiger-Webservices-curl/
 ├── controller/
 │  └──classes/
 │    ├──crm_webservice.php
