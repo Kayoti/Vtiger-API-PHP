@@ -5,7 +5,7 @@ Vtiger-Webservices-curl/
 ├── controller/
 │  └──classes/
 │    ├──crm_webservice.php
-│    ├──query.php
+│    ├──crm_crudoperation.php
 │  ├──auth.php
 ├── model/
 │  constant.php
