@@ -1,4 +1,4 @@
-### Vtiger API PHP Wrapper (webservices) ///PSR-4 🆗 ✅///
+### Vtiger API PHP Wrapper (webservices) [PSR-4 🆗 ✅]
 ###Structure
 ```
 Vtiger-Webservices-curl/
