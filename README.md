@@ -35,7 +35,8 @@ error_reporting(E_ALL);
 ?>
 ```
 ###Usage
-in the main dir of your project open composer and execute ```composer self-update``` followed by ```composer dump-autoload -o ```
+in the main dir of your project open composer and execute ```composer self-update```
+ followed by ```composer dump-autoload -o ```
 
 To use this project you must replace the variables in model/constant.inc with your CRM information
 ```php
