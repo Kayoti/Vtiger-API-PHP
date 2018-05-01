@@ -1,13 +1,18 @@
 <?php
-include('../model/constant.inc');
-/* create entry by using Webservice -API */
-include(ROOT_PATH.'controller/classes/crm_webservice.php');
-include(ROOT_PATH.'controller/auth.php');
-include(ROOT_PATH.'controller/classes/crm_crudoperation.php');
+require_once('../model/constant.inc');
+
+use VtApiClasses\Operations\crm_crudoperation as crm_crudoperation;
+use VtApiClasses\Webservices\crm_auth as crm_auth;
 
 // Get the url and sessionid from auth.php
-// create instance for class
-$qryobj=new crm_crudoperation($endpointUrl,$sessionid);
+if($_SESSION["vtsession"]==""){
+session_unset();
+$authobj=new crm_auth($endpointUrl,$userName,$userAccessKey);
+$_SESSION["vtsession"] = $authobj->sessionid;;
+}
+
+// create instance for class query (has all crud operations)
+$qryobj=new crm_crudoperation($endpointUrl,$_SESSION["vtsession"]);
 
 // Create operation
 $createData=Array ("firstname" => "test" ,"lastname" => "tester","phone" => "1000000001");
