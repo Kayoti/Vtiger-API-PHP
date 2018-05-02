@@ -51,4 +51,4 @@ $userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
 ?>
 ```
 ###Examples
-you can learn more and test this project by visiting the examples provided within the view folder of this project.
+available in the view folder of this project.
