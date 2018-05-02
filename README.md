@@ -26,11 +26,11 @@ Vtiger-Webservices-curl/
 
 
 ```		
-###Installation
+### 💾Installation
 To run this project make sure that curl is installed and active in your php.ini
 You will Also need Composer to manage classes
 
-###Usage
+### ▶️Usage
 in the main dir of your project open composer and execute ```composer self-update```
 
 followed by ```composer dump-autoload -o ```
@@ -43,11 +43,11 @@ $userName='[YOUR CRM USER HERE]';
 $userAccessKey='[YOUR CRM USER ACCESS KEY HERE]';
 ?>
 ```
-###Examples
+### 📜Examples
 ```php
 available in the view folder of this project.
 ```
-* PRO tip -> to debug your code use the following code to toggle error messages display On/OFF
+* 💪PRO tip -> to debug your code use the following code to toggle error messages display On/OFF
 ```php
 <?php
 ini_set('display_errors', 1);
