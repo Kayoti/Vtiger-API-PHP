@@ -8,7 +8,7 @@ use VtApiClasses\Webservices\crm_auth as crm_auth;
 if($_SESSION["vtsession"]==""){
 session_unset();
 $authobj=new crm_auth($endpointUrl,$userName,$userAccessKey);
-$_SESSION["vtsession"] = $authobj->sessionid;;
+$_SESSION["vtsession"] = $authobj->sessionid;
 }
 
 // create instance for class query (has all crud operations)

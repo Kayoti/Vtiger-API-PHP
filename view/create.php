@@ -8,16 +8,17 @@ use VtApiClasses\Webservices\crm_auth as crm_auth;
 if($_SESSION["vtsession"]==""){
 session_unset();
 $authobj=new crm_auth($endpointUrl,$userName,$userAccessKey);
-$_SESSION["vtsession"] = $authobj->sessionid;;
+$_SESSION["vtsession"] = $authobj->sessionid;
 }
 
 // create instance for class query (has all crud operations)
 $qryobj=new crm_crudoperation($endpointUrl,$_SESSION["vtsession"]);
 
 // Create operation
-$createData=Array ("firstname" => "test" ,"lastname" => "tester","phone" => "1000000001");
-
-$createDetails=$qryobj->crm_create($createData);
+$createData=Array ("firstname" => "testwaelx" ,"lastname" => "testerwaelx","assigned_user_id"=>"1");
+//specify the module you are trying to work with
+$targetModule="Leads";
+$createDetails=$qryobj->crm_create($createData,$targetModule);
 echo "<pre>";
 print_r($createDetails);
 echo "</pre>";

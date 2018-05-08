@@ -79,7 +79,7 @@ class crm_crudoperation    // Class Start
   // performing two operations : query and create
   // operation query : to idendify the user exist in crm
   // operation create : new entry in crm DB
-  public function crm_create($createData){  // create Function implementation
+  public function crm_create($createData,$targetModule){  // create Function implementation
 
       $returndata="";
       /*$firstname=$createData['firstname'];
@@ -96,7 +96,7 @@ class crm_crudoperation    // Class Start
           $returndata=" Lead already exist !!!";
       }else{ */
           $createDataJson = json_encode($createData);
-          $param=array("operation" => "create", "sessionName" => $this->_sessionID, "element" => $createDataJson, "elementType" => "Leads");
+          $param=array("operation" => "create", "sessionName" => $this->_sessionID, "element" => $createDataJson, "elementType" => $targetModule);
           $dataDetails = crm_webservice::curl_execution($this->_url,$param,"POST");
           $returndata=$dataDetails;
 
