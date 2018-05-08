@@ -11,7 +11,7 @@ $authobj=new crm_auth($endpointUrl,$userName,$userAccessKey);
 $_SESSION["vtsession"] = $authobj->sessionid;
 }
 
-// create instance for class query (has all crud operations)
+// create instance for class crm_crudoperation (has all crud operations)
 $qryobj=new crm_crudoperation($endpointUrl,$_SESSION["vtsession"]);
 // Delete Operation
 $dataArray=array("firstname"=>"test","lastname"=>"tester","email"=>"test@example.com");
