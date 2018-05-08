@@ -15,7 +15,7 @@ $_SESSION["vtsession"] = $authobj->sessionid;
 $qryobj=new crm_crudoperation($endpointUrl,$_SESSION["vtsession"]);
 
 // Create operation
-$createData=Array ("firstname" => "testwaelx" ,"lastname" => "testerwaelx","assigned_user_id"=>"1");
+$createData=Array ("firstname" => "test" ,"lastname" => "tester","assigned_user_id"=>"1");
 //specify the module you are trying to work with
 $targetModule="Leads";
 $createDetails=$qryobj->crm_create($createData,$targetModule);
