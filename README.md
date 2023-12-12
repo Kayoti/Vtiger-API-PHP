@@ -5,21 +5,27 @@
 ### 📂Structure
 ```
 Vtiger-Webservices-curl/
-├── controller/
+├── Controller/
 │  └──VtApiClasses/
 │     └──Operations/
 │        ├──CrmCrudOperations.php
-│     └──Webservices/
-│        ├──CrmAuth.php
+│     └──WebServices/
 │        ├──CrmWebService.php
-├── model/
-│  constant.php
+├── Service/
+│     └──VtApiServices/
+│        └──WebServices/
+│           VtigerService.php
+├── Model/
+│   ├──Const.php
 ├── View/
-│  ├──index.php
-│  ├──create.php
-│  ├──read.php
-│  ├──update.php
-│  ├──delete.php
+│  ├──CreateSingleRecord.php
+│  ├──CreateMultiRecord.php
+│  ├──Read.php
+│  ├──UpdateSingleRecord.php
+│  ├──UpdateMultiRecord.php
+│  ├──DeleteSingleRecord.php
+│  ├──DeleteMultiRecord.php
+│  ├──ModuleFieldNames.php
 ├── .gitignore.swp
 ├── .README.md
 ├── .LICENSE.md
