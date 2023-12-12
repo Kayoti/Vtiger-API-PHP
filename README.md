@@ -38,9 +38,12 @@ followed by ```composer dump-autoload -o ```
 To use this project you must add/modify your php environment variables to match your CRM information read more about php environment variables and how to set them up for security purposes
 ```php
 <?php
-$endpointUrl = getenv('CRMURL');            // [YOUR CRM URL ENVIRONMENT VARIABLE HERE] YOUR URL MUST END WITH /webservice.php eg(http://example.com/vtigercrm/webservice.php)
-$userName=getenv('CRMUSERNAME');    // [YOUR CRM USER ENVIRONMENT VARIABLE HERE]
+$endpointUrl = getenv('CRMURL'); // [YOUR CRM URL ENVIRONMENT VARIABLE HERE] YOUR URL MUST END WITH /webservice.php eg(http://example.com/vtigercrm/webservice.php)
+$userName=getenv('CRMUSERNAME'); // [YOUR CRM USER ENVIRONMENT VARIABLE HERE]
 $userAccessKey=getenv('CRMAPIKEY'); // [YOUR CRM USER ACCESS KEY ENVIRONMENT VARIABLE HERE]
+$EndPointUrl = getenv('CRMURL'); // [YOUR CRM URL ENVIRONMENT VARIABLE HERE] YOUR URL MUST END WITH /webservice.php eg(http://example.com/vtigercrm/webservice.php)
+$UserName=getenv('CRMUserName'); // [YOUR CRM USER ENVIRONMENT VARIABLE HERE]
+$UserAccessKey=getenv('CRMAPIKEY'); // [YOUR CRM USER ACCESS KEY ENVIRONMENT VARIABLE HERE]
 ?>
 ```
 ### 📜Examples
