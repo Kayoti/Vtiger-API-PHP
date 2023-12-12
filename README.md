@@ -4,7 +4,7 @@
 ### Vtiger REST API PHP Wrapper (webservices) [PSR-4 🆗 ✅]
 ### 📂Structure
 ```
-Vtiger-Webservices-curl/
+VtigerAPI-PHP/
 ├── Controller/
 │  └──VtApiClasses/
 │     └──Operations/
