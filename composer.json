@@ -1,7 +1,8 @@
 {
   "autoload":{
     "psr-4":{
-      "VtApiClasses\\":"controller/VtApiClasses"
+      "VtApiClasses\\Controllers\\":"Controller/VtApiClasses",
+      "VtApiServices\\Services\\": "Service/VtApiServices"
     }
   }
 }
